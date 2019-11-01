@@ -11,7 +11,7 @@
 - [Contribution](#contribution)
 
 ## Installation
-
+- This component use "React Hook" under the hood so if you want to use this, your project must use React-Native > 0.59 (supported hook)
 * 1.`npm i react-native-flatlist-multiple-choose --save`
 * 2.`import {FlatlistMultipleChoose} from 'react-native-flatlist-multiple-choose';`
 
