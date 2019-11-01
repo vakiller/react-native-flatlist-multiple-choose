@@ -1,0 +1,28 @@
+{
+  "name": "react-native-flatlist-multiple-choose",
+  "version": "1.0.0",
+  "description": "A flatlist component with multiple choose feature",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vakiller/react-native-flatlist-multiple-choose.git"
+  },
+  "keywords": [
+    "react-native",
+    "react-component",
+    "flatlist",
+    "multiple",
+    "checkbox",
+    "multiple",
+    "choose"
+  ],
+  "author": "vakiller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vakiller/react-native-flatlist-multiple-choose/issues"
+  },
+  "homepage": "https://github.com/vakiller/react-native-flatlist-multiple-choose#readme"
+}
