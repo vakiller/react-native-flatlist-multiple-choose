@@ -6,8 +6,9 @@ export const FlatlistMultipleChoose = (props) => {
     const [customList, setCustomList] = useState([]);
     const [dataList, setDataList] = useState(props.data);
     const [choosedAll, setChoosedAll] = useState(false);
-    const [checkedBackground,setCheckedBackground] = useState(props.checkedBackgroundColor ? props.checkedBackgroundColor : '#F3F9FF');
-    const [unCheckedBackground,setUnCheckedBackground] = useState(props.unCheckedBackgroundColor ? props.unCheckedBackgroundColor : '#ffff');
+    const [checkedBackground, setCheckedBackground] = useState(props.checkedBackgroundColor ? props.checkedBackgroundColor : '#F3F9FF');
+    const [unCheckedBackground, setUnCheckedBackground] = useState(props.unCheckedBackgroundColor ? props.unCheckedBackgroundColor : '#ffff');
+    const [SelectAllTitle, setSelectAllTitle] = useState(props.selectAllText ? props.selectAllText : 'Select All');
     useEffect(() => {
         setDataList(props.data);
     }, [props.data]);
@@ -29,7 +30,7 @@ export const FlatlistMultipleChoose = (props) => {
                 if (customListNow[item].checked === false) {
                     customListNow[item].checked = true;
                     let itemChoosed = customListNow[item];
-                    if ([...choosedList,itemChoosed].length === customListNow.length) {
+                    if ([...choosedList, itemChoosed].length === customListNow.length) {
                         setChoosedAll(true);
                     }
                     else {
@@ -58,24 +59,24 @@ export const FlatlistMultipleChoose = (props) => {
     const renderSelectItem = (item, id) => {
         console.log("ITEM IN FLATLIST ", item);
         return (
-            <View style={item.item.checked ? {backgroundColor:  checkedBackground } : { backgroundColor: unCheckedBackground }} >
-                  <View style={props.itemStyle ? props.itemStyle : {marginTop : 10,marginBottom : 10,borderColor : '#f3f3f3',borderWidth : 0.5}} >  
+            <View style={item.item.checked ? { backgroundColor: checkedBackground } : { backgroundColor: unCheckedBackground }} >
+                <View style={props.itemStyle ? props.itemStyle : { marginTop: 10, marginBottom: 10, borderColor: '#f3f3f3', borderWidth: 0.5 }} >
                     <TouchableOpacity onPress={() => onPressItem(item.item.id)} style={{ flexDirection: 'row', flex: 1, alignItems: 'center' }} >
                         <View style={{ borderRadius: 1, borderColor: 'black' }} >
                             {
-                                    <Checkbox
-                                        onClick={() => onPressItem(item.item.id)}
-                                        checkedCheckBoxColor={props.checkedColor ? props.checkedColor : 'red'}
-                                        uncheckedCheckBoxColor={'black'}
-                                        // checkBoxColor={'red'}
-                                        isChecked={item.item.checked}
-                                    />
-                                
+                                <Checkbox
+                                    onClick={() => onPressItem(item.item.id)}
+                                    checkedCheckBoxColor={props.checkedColor ? props.checkedColor : 'red'}
+                                    uncheckedCheckBoxColor={'black'}
+                                    // checkBoxColor={'red'}
+                                    isChecked={item.item.checked}
+                                />
+
                             }
                         </View>
                         {React.cloneElement(props.customItem, item.item)}
                     </TouchableOpacity>
-                    </View>
+                </View>
             </View>
         );
     };
@@ -107,7 +108,7 @@ export const FlatlistMultipleChoose = (props) => {
         <View style={props.listStyle} >
             <TouchableOpacity style={props.itemStyle} onPress={() => onChoosedAll()} >
 
-                <View style={{flexDirection: 'row', alignItems: 'center',marginTop : 15,marginBottom : 15 }} >
+                <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 15, marginBottom: 15 }} >
 
                     <Checkbox
                         checkedCheckBoxColor={props.checkedColor ? props.checkedColor : 'red'}
@@ -117,7 +118,7 @@ export const FlatlistMultipleChoose = (props) => {
                     />
 
 
-                    <Text style={{ marginLeft: 10, fontWeight: 'bold', fontSize: 14 }} >{props.selectAllText ? props.selectAllText : 'Select All'}</Text>
+                    <Text style={{ marginLeft: 10, fontWeight: 'bold', fontSize: 14 }} >{SelectAllTitle}</Text>
                 </View>
             </TouchableOpacity>
             <FlatList
