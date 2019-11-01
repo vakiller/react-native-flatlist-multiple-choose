@@ -122,6 +122,7 @@ export const FlatlistMultipleChoose = (props) => {
                 </View>
             </TouchableOpacity>
             <FlatList
+                keyExtractor={(item,index) => index.toString()}
                 extraData={props.extraData}
                 data={customList}
                 renderItem={(item, id) => renderSelectItem(item, id)}
