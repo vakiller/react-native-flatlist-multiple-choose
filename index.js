@@ -117,7 +117,7 @@ export const FlatlistMultipleChoose = (props) => {
                     />
 
 
-                    <Text style={{ marginLeft: 10, fontWeight: 'bold', fontSize: 14 }} >Chọn tất cả</Text>
+                    <Text style={{ marginLeft: 10, fontWeight: 'bold', fontSize: 14 }} >{props.selectAllText ? props.selectAllText : 'Select All'}</Text>
                 </View>
             </TouchableOpacity>
             <FlatList

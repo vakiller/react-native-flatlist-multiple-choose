@@ -1,3 +1,3 @@
 # React Native Flatlist Multiple Choose
 
-![](Demo.gif)
+![](Demo.gif) ![](DemoAndroid.gif)
