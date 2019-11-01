@@ -1,6 +1,6 @@
 {
   "name": "react-native-flatlist-multiple-choose",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "A flatlist component with multiple choose feature",
   "main": "index.js",
   "scripts": {
@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/vakiller/react-native-flatlist-multiple-choose/issues"
   },
-  "homepage": "https://github.com/vakiller/react-native-flatlist-multiple-choose#readme"
+  "homepage": "https://github.com/vakiller/react-native-flatlist-multiple-choose/blob/master/readme.md",
+  "devDependencies": {
+    "metro-react-native-babel-preset": "^0.57.0"
+  }
 }

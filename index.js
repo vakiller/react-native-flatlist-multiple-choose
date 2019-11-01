@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { View, FlatList, Text, TouchableOpacity, Platform, Image } from 'react-native';
-import Checkbox from './components/Checkbox';
+import Checkbox from './Checkbox';
 export const FlatlistMultipleChoose = (props) => {
     const [choosedList, setChoosedList] = useState([]);
     const [customList, setCustomList] = useState([]);
