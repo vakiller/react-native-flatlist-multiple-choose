@@ -46,7 +46,8 @@ customItem  |  PropTypes.element | false |  | Custom item of flatlist
 onChangeDatasChoosed | PropTypes.func.isRequired |true |   | A callback return array of Items selected
 checkedCheckBoxColor | PropTypes.string | true | 'red'  | Custom color of checkbox when it's checked
 checkedBackgroundColor | PropTypes.string | true | '#F3F9FF'  | Custom background color of item when it's checked
-unCheckedBackgroundColor | PropTypes.element | true | '#ffff'  | Custom background color of item when it's unchecked
+unCheckedBackgroundColor | PropTypes.string | true | '#ffff'  | Custom background color of item when it's unchecked
+selectAllText | PropTypes.string | true | 'Select All'  | Custom select all title
 
 ## Contribution
 
