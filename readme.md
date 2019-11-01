@@ -31,7 +31,7 @@ Add `react-native-flatlist-multiple-choose` to your js file.
     customItem={<MissionHolder navigationKey={this.props.navigation.state.key} />} />
 ```
 
-- customItem is where you you can set you item of you "Flatlist Multiple Choose"
+- customItem is where you can custome your item of you "Flatlist Multiple Choose"
 
 - onChangeDatasChoosed is a callback function when "Flatlist Multiple Choose" return an array include all of your selected item every time after user choose an item
 
