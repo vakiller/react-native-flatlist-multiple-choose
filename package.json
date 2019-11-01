@@ -1,6 +1,6 @@
 {
   "name": "react-native-flatlist-multiple-choose",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A flatlist component with multiple choose feature",
   "main": "index.js",
   "scripts": {
