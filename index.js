@@ -10,16 +10,18 @@ export const FlatlistMultipleChoose = (props) => {
     const [unCheckedBackground, setUnCheckedBackground] = useState(props.unCheckedBackgroundColor ? props.unCheckedBackgroundColor : '#ffff');
     const [SelectAllTitle, setSelectAllTitle] = useState(props.selectAllText ? props.selectAllText : 'Select All');
     useEffect(() => {
+        if(props.data === [])
+        {
+            setChoosedAll(false);
+        }
         setDataList(props.data);
     }, [props.data]);
     useEffect(() => {
-        console.log("DATALIST ", dataList);
         if (dataList) {
             let dataListNow = dataList;
             dataListNow.map((item) => {
                 item.checked = false
             });
-            console.log("DATALISTNOW ", dataListNow);
             setCustomList(dataListNow)
         }
     }, [dataList]);
